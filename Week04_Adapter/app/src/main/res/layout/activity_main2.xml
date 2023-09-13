@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    >
+    <TextView
+        android:id="@+id/essentials"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Essentials of Developing Android 5.0"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:padding="20dp"
+        android:textSize="20dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/essentials"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Name" />
+
+        <EditText
+            android:id="@+id/textPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number"
+            android:layout_below="@+id/textName"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textPhone">
+
+            <RadioGroup
+                android:id="@+id/radio1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cheese" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 x Cheese"
+                    />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="None" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id = "@+id/radio2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/radio1">
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Square">
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioButton5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Round">
+                </RadioButton>
+            </RadioGroup>
+            <CheckBox
+                android:id="@+id/check1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio2"
+                android:text="Pepperoni">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/check2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio2"
+                android:text="Mushroom"
+                android:layout_toRightOf="@+id/check1">
+            </CheckBox>
+            <CheckBox
+                android:id="@+id/check3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radio2"
+                android:text="Veggies"
+                android:layout_toRightOf="@+id/check2">
+            </CheckBox>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your ordering:"
+                android:layout_below="@+id/check1"
+                android:textColor="#C5C0C0">
+            </TextView>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#DDD6D6"
+                android:layout_below="@+id/textView5"
+                android:layout_marginBottom="10dp"/>
+
+            <Button
+                android:id="@+id/button1"
+                android:background="@drawable/shape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exit"
+                android:gravity="center"
+                android:layout_below="@+id/textView6">
+            </Button>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS-PLACE YOUR ORDER"
+                android:gravity="center"
+                android:layout_below="@+id/textView6"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape">
+            </Button>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
