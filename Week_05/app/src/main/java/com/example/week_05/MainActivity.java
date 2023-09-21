@@ -21,6 +21,8 @@ public class MainActivity extends Activity {
     TextView lblDateAndTime;
     Calendar myCalendar = Calendar.getInstance();
 
+
+
     DatePickerDialog.OnDateSetListener d = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker datePicker, int i, int i1, int i2) {

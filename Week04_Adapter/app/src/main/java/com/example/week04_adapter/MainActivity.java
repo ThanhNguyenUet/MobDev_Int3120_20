@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter arrayAdapter;
-    String countryList[] = {"India", "China", "Australia", "Portugal", "America", "Newzeland"};
+    String countryList[] = {"Choose Option","India", "China", "Australia", "Portugal", "America", "Newzeland"};
 
-    String userName[] = {"Jack", "Jack", "Jack", "Jack", "Jack", "Jack"};
+    String userName[] = {"Choose Option","Jack", "Jack", "Jack", "Jack", "Jack", "Jack"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -46,8 +46,26 @@ public class MainActivity extends AppCompatActivity {
 //        listView.setAdapter(customAdapter);
 
         // Spinner non customed adapter
-//        arrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_item, R.id.textView2, countryList);
-//        spinner.setAdapter(arrayAdapter);
+        arrayAdapter = new ArrayAdapter<String>(this, R.layout.listview_item, R.id.textView2, countryList);
+        spinner.setAdapter(arrayAdapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                // i = position , l = ten id 1 row
+                if (adapterView.getItemAtPosition(i).equals("Choose Option")) {
+                    // o lam j
+                } else {
+                    CharSequence text = "You click position :" + i + ", value :" + countryList[i] ;
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast.makeText(getApplicationContext(), text, duration).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+            }
+        });
 
         // Custom adapter for spinner
 //        CustomAdapter customAdapter = new CustomAdapter(this, countryList, userName);
